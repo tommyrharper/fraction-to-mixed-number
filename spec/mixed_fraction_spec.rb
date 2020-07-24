@@ -36,4 +36,8 @@ describe 'mixed_fraction' do
   it 'returns -1 for -1/1' do
     expect(mixed_fraction('-1/1')).to eq '-1'
   end
+
+  it 'returns 0 for 0/-1' do
+    expect(mixed_fraction('0/-1')).to eq '0'
+  end
 end
