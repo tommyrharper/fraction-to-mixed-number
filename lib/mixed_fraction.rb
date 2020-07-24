@@ -1,10 +1,10 @@
 def mixed_fraction(s)
   numerator = s.split('/')[0].to_i
   denom = s.split('/')[1].to_i
-  rat = Rational(numerator, denom)
+  fract = Rational(numerator, denom)
 
   if numerator.negative? ^ denom.negative?
-    return rat.zero? ? '0' : rat.to_s if numerator.abs < denom.abs
+    return fract.zero? ? '0' : fract.to_s if numerator.abs < denom.abs
 
     num = (numerator.to_f / denom).ceil
     num_s = num.zero? ? nil : num.to_s + ' '
