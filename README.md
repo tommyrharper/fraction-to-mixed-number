@@ -197,7 +197,7 @@ The extra ```||``` statement takes care of negative denominators.
 
 GREEN.
 
-### Test 6
+### Test 6 & 7
 
 I found another edge case:
 
@@ -206,3 +206,8 @@ I found another edge case:
     expect(mixed_fraction('10/-7')).to eq '-1 3/7'
   end
 ```
+
+Add in further logic. GREEN.
+Repeat for test 7, very similar problem.
+
+
