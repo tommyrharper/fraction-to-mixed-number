@@ -29,3 +29,28 @@ Note
 Make sure not to modify the input of your function in-place, it is a bad practice.
 
 
+## Development Journal
+
+First I ran:
+```
+rpsec --init
+mkdir lib
+touch lib/mixed_faction.rb
+touch spec/mixed_faction_spec.rb
+touch .rubocop.yml
+```
+
+Then I added the following rules to ```.rubocop.yml```:
+```yml
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'spec/spec_helper.rb'
+```
+
+
+That is my basic setup done.
+
+
