@@ -4,3 +4,6 @@ Style/FrozenStringLiteralComment:
 AllCops:
   Exclude:
     - 'spec/spec_helper.rb'
+
+Naming/MethodParameterName:
+  Enabled: false
