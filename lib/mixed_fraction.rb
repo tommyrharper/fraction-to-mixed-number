@@ -2,7 +2,7 @@ def mixed_fraction(s)
   numerator = s.split('/')[0].to_i
   denom = s.split('/')[1].to_i
 
-  if numerator < 0
+  if numerator < 0 || denom < 0
     return Rational(numerator, denom).to_s
   end
 
