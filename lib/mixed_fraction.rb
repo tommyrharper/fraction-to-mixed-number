@@ -12,7 +12,7 @@ def mixed_fraction(s)
     puts numerator / denom
     puts num
     num_s = num.zero? ? nil : num.to_s + ' '
-    fraction = Rational((numerator - (num * denom)), denom.abs)
+    fraction = Rational((numerator - (num * denom)).abs, denom.abs)
 
   else
 
