@@ -280,3 +280,17 @@ With test 10 I believe I found the final edge case. RED.
 Solved it. GREEN.
 
 And now I have to refactor, because this has got super ugly!
+
+## Final Notes
+
+I enjoyed this Kata, it was super fun, and good to practice TDD. What did I learn.
+
+Two main things:
+
+1. The ```Rational(x, y)``` inbuilt operation for simplifying ruby fractions.
+2. The ```^``` XOR logic statement in Ruby. 
+
+Yay, awesome!
+
+Thanks for reading :)
+
