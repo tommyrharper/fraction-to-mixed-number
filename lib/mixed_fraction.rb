@@ -1,12 +1,12 @@
 def mixed_fraction(s)
   numerator = s.split('/')[0].to_i
   denom = s.split('/')[1].to_i
-  if ((numerator < 0) ^ (denom < 0 )) && (numerator.abs < denom.abs)
-    puts "here"
-    return '0' if Rational(numerator, denom) == 0
-    return Rational(numerator, denom).to_s
-  elsif ((numerator < 0) ^ (denom < 0) )
-    num = (numerator.to_f / denom.to_f).ceil
+  rat = Rational(numerator, denom)
+
+  if numerator.negative? ^ denom.negative?
+    return rat.zero? ? '0' : rat.to_s if numerator.abs < denom.abs
+
+    num = (numerator.to_f / denom).ceil
     num_s = num.zero? ? nil : num.to_s + ' '
     fraction = Rational((numerator - (num * denom)).abs, denom.abs)
   else
@@ -14,5 +14,6 @@ def mixed_fraction(s)
     num_s = num.zero? ? nil : num.to_s + ' '
     fraction = Rational(numerator - (num * denom), denom)
   end
+
   (numerator % denom).zero? ? num.to_s : "#{num_s}#{fraction}"
 end
