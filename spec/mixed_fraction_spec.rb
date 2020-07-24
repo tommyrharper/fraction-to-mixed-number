@@ -6,6 +6,6 @@ describe 'mixed_fraction' do
   end
 
   it 'returns 2 for 6/3' do
-    expect(mixed_fraction('42/9')).to eq '4 2/3'
+    expect(mixed_fraction('6/3')).to eq '2'
   end
 end
