@@ -186,3 +186,13 @@ New test for another edge case:
 
 RED.
 
+Simple fix for this one, adjust the last additional statement to:
+
+```ruby
+if numerator < 0 || denom < 0
+  return Rational(numerator, denom).to_s
+end
+```
+The extra ```||``` statement takes care of negative denominators.
+
+GREEN.
