@@ -1,13 +1,13 @@
-def mixed_fraction(fraction)
-  numerator = fraction.split('/')[0].to_i
-  denominator = fraction.split('/')[1].to_i
+def mixed_fraction(s)
+  numerator = s.split('/')[0].to_i
+  denominator = s.split('/')[1].to_i
   if numerator % denominator == 0
-    mixed_fraction = (numerator / denominator).to_s
+    mixed_s = (numerator / denominator).to_s
   else 
     number = (numerator / denominator).floor
     numerator = (numerator - (number * denominator))
-    fraction = Rational(numerator, denominator)
-    mixed_fraction = "#{number.to_s} #{fraction.to_s}"
+    s = Rational(numerator, denominator)
+    mixed_s = "#{number.to_s} #{s.to_s}"
   end
-  mixed_fraction
+  mixed_s
 end
