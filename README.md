@@ -128,3 +128,23 @@ There we are, short and sweet. GREEN.
 # Test three
 
 Now I am going to write another test to prove my code wrong.
+
+Test for 2/3:
+
+```ruby 
+  it 'returns 2/3 for 2/3' do
+    expect(mixed_fraction('2/3')).to eq '2/3'
+  end
+```
+
+RED.
+
+And a solution, add in these two lines:
+
+```ruby
+  num1 = num.zero? ? nil : num.to_s + ' '
+  (n % d).zero? ? num.to_s : "#{num1}#{Rational(n - (num * d), d)}"
+```
+
+This is getting a bit unreadable, lets improve that.
+
