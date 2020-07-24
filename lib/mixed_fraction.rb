@@ -2,9 +2,9 @@ def mixed_fraction(s)
   numerator = s.split('/')[0].to_i
   denom = s.split('/')[1].to_i
 
-  if (numerator < 0 || denom < 0 ) && (numerator.abs <= denom.abs)
+  if ((numerator < 0) ^ (denom < 0 )) && (numerator.abs <= denom.abs)
     return Rational(numerator, denom).to_s
-  elsif (numerator < 0 || denom < 0 )
+  elsif ((numerator < 0) ^ (denom < 0) )
     puts "yo"
     num = (numerator.to_f / denom.to_f).ceil
     puts numerator
