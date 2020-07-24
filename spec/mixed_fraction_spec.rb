@@ -1,0 +1,1 @@
+require '../lib/mixed_faction.rb'
