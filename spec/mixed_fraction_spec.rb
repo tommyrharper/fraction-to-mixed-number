@@ -8,4 +8,8 @@ describe 'mixed_fraction' do
   it 'returns 2 for 6/3' do
     expect(mixed_fraction('6/3')).to eq '2'
   end
+
+  it 'returns 2/3 for 2/3' do
+    expect(mixed_fraction('2/3')).to eq '2/3'
+  end
 end
