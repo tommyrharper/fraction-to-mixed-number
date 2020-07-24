@@ -210,4 +210,65 @@ I found another edge case:
 Add in further logic. GREEN.
 Repeat for test 7, very similar problem.
 
+### Test 8
 
+This is an interesting one.
+
+TEST:
+```ruby
+  it 'returns 3 1/7 for -22/-7' do
+    expect(mixed_fraction('-22/-7')).to eq '3 1/7'
+  end
+```
+
+RED.
+
+Now the problem here is that this statement:
+```ruby
+numerator < 0 || denom < 0
+```
+Should not be an ```OR``` statment, it should be an ```XOR```. Meaning it should only be judged as true if the numerator or the denom is less than zero, but not if both are.
+
+That is to say:
+
+- XOR GATEE
+  
+| Input | Input | Output |
+|-----|----|----|
+| True | True | FALSE |
+| True | False | TRUE |
+| False | True | TRUE |
+| False | Flase | FALSE |
+
+In ruby:
+
+```ruby
+^
+```
+
+Previously:
+
+- OR GATE
+  
+| Input | Input | Output |
+|-----|----|----|
+| True | True | TRUE |
+| True | False | TRUE |
+| False | True | TRUE |
+| False | Flase | FALSE |
+
+In ruby:
+
+```ruby
+||
+```
+
+So the solution to our problem is to use an xor gate.
+
+This is written as follows:
+
+```ruby
+(numerator < 0) ^ (denom < 0)
+```
+
+Tadaaa. Green.
