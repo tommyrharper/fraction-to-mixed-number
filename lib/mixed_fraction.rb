@@ -3,6 +3,7 @@ def mixed_fraction(s)
   denom = s.split('/')[1].to_i
   if ((numerator < 0) ^ (denom < 0 )) && (numerator.abs < denom.abs)
     puts "here"
+    return '0' if Rational(numerator, denom) == 0
     return Rational(numerator, denom).to_s
   elsif ((numerator < 0) ^ (denom < 0) )
     num = (numerator.to_f / denom.to_f).ceil
