@@ -125,7 +125,7 @@ end
 
 There we are, short and sweet. GREEN.
 
-# Test three
+### Test three
 
 Now I am going to write another test to prove my code wrong.
 
@@ -147,4 +147,42 @@ And a solution, add in these two lines:
 ```
 
 This is getting a bit unreadable, lets improve that.
+
+REFACTOR. GREEN.
+
+### Test 4
+
+New test.
+
+```ruby
+  it 'returns -2/3 for -2/3' do
+    expect(mixed_fraction('-2/3')).to eq '-2/3'
+  end
+```
+
+RED.
+
+The solution is another peice of logic: 
+
+```ruby
+if numerator < 0
+  return Rational(numerator, denom).to_s
+end
+```
+
+GREEN.
+
+Lets refactor again.
+
+### Test 5
+
+New test for another edge case:
+
+```ruby
+  it 'returns -2/3 for 4/-6' do
+    expect(mixed_fraction('4/-6')).to eq '-2/3'
+  end
+```
+
+RED.
 
