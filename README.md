@@ -271,4 +271,12 @@ This is written as follows:
 (numerator < 0) ^ (denom < 0)
 ```
 
-Tadaaa. Green.
+Tadaaa. Green. REFACTOR.
+
+### Test 10
+
+With test 10 I believe I found the final edge case. RED.
+
+Solved it. GREEN.
+
+And now I have to refactor, because this has got super ugly!
