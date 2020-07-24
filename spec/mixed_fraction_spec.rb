@@ -28,4 +28,8 @@ describe 'mixed_fraction' do
   it 'returns -1 3/7 for -10/7' do
     expect(mixed_fraction('-10/7')).to eq '-1 3/7'
   end
+
+  it 'returns 3 1/7 for -22/-7' do
+    expect(mixed_fraction('-22/-7')).to eq '3 1/7'
+  end
 end
